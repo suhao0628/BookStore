@@ -13,6 +13,8 @@ namespace BookStore.DataAccess.Repository.IRepository
         IProductRepository Product { get; }
 
         IProductImageRepository ProductImage { get; }
+
+        ICompanyRepository Company { get; }
         void Save();
     }
 }
