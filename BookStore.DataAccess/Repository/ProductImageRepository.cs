@@ -11,8 +11,8 @@ namespace BookStore.DataAccess.Repository
 {
     public class ProductImageRepository:Repository<ProductImage>, IProductImageRepository
     {
-        private ApplicationDbContext _db;
-        public ProductImageRepository(ApplicationDbContext db) : base(db)
+        private AppDbContext _db;
+        public ProductImageRepository(AppDbContext db) : base(db)
         {
             _db = db;
         }

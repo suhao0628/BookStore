@@ -10,12 +10,12 @@ namespace BookStore.DataAccess.Repository
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private ApplicationDbContext _db;
+        private AppDbContext _db;
         public ICategoryRepository Category { get; private set; }
         public IProductRepository Product { get; private set; }
 
         public IProductImageRepository ProductImage { get; private set; }
-        public UnitOfWork(ApplicationDbContext db)
+        public UnitOfWork(AppDbContext db)
         {
             _db = db;
             Category = new CategoryRepository(_db);
