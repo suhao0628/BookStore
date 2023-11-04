@@ -20,7 +20,11 @@ namespace BookStore.DataAccess.Repository.IRepository
 
         IAppUserRepository AppUser { get; }
 
-        
+        IOrderHeaderRepository OrderHeader { get; }
+
+        IOrderDetailRepository OrderDetail { get; }
+
+
         void Save();
     }
 }
