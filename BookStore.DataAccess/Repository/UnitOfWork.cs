@@ -1,5 +1,6 @@
 ﻿using BookStore.DataAccess.Data;
 using BookStore.DataAccess.Repository.IRepository;
+using BookStore.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,11 @@ namespace BookStore.DataAccess.Repository
         public IProductImageRepository ProductImage { get; private set; }
 
         public ICompanyRepository Company { get; private set; }
+
+        public IShoppingCartRepository ShoppingCart { get; private set; }
+        public IAppUserRepository AppUser { get; private set; }
+
+        
         public UnitOfWork(AppDbContext db)
         {
             _db = db;
@@ -24,6 +30,8 @@ namespace BookStore.DataAccess.Repository
             Product = new ProductRepository(_db);
             ProductImage = new ProductImageRepository(_db);
             Company = new CompanyRepository(_db);
+            ShoppingCart = new ShoppingCartRepository(_db);
+            AppUser = new AppUserRepository(_db);
         }
 
             public void Save()
